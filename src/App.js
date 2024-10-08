@@ -1,17 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import Login from './admin/Login'; // Import the Login component
+import Home from './main/Home'; // Import the Home component
 
 const App = () => {
   return (
-    <Router>
-      <Switch>
-        <Route path="/login" component={Login} />
-        <Route path="/home" component={Home} />
-        {/* Add additional routes as needed */}
-      </Switch>
-    </Router>
+    <Routes>
+      {/* Default route: redirect to /login */}
+      <Route path="/" element={<Navigate to="/login" />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/home" element={<Home />} />
+    </Routes>
   );
 };
+
 export default App;
+

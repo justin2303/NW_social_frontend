@@ -5,8 +5,8 @@ const Login = () => {
   const [GUID, setGUID] = useState('');
   const [Password, setPassword] = useState('');
   const [error, setError] = useState('');
-
-  // Function to handle login
+  const navigate = useNavigate();
+  // Function to handle login 
   const handleLogin = async (event) => {
     event.preventDefault();
 
@@ -22,7 +22,7 @@ const Login = () => {
 
 
     if (response.ok) {
-      useNavigate('/home');
+      navigate('/home', { state: { GUID } });
       // Handle successful login: Redirect to home or update UI
       console.log('Login successful, redirecting to Home...');
     } else {
