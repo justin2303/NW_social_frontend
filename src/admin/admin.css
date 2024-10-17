@@ -1,0 +1,8 @@
+.admin_stuff {
+    display: flex;
+    flex-direction: column; /* This will stack children vertically */
+    align-items: center;    /* Centers children horizontally */
+    justify-content: center; /* Centers children vertically */
+    width: 100%;            /* Ensures it takes the full width */
+  }
+  

@@ -1,0 +1,27 @@
+.response-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adds space between columns */
+    font-size: 10px;
+  }
+  
+  .column {
+    flex: 1; /* Each column will take equal space */
+    padding: 10px;
+    border: 1px solid #ccc; /* Optional: Add border for visualization */
+  }
+  
+  .data-table {
+    width: 100%; /* Make the table span the full width of the column */
+    border-collapse: collapse;
+  }
+  
+  .data-table td {
+    border: 1px solid #ccc; /* Border for each table cell */
+    padding: 8px;
+    text-align: center;
+  }
+  
+  h3 {
+    text-align: center;
+  }

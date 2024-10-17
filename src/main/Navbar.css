@@ -1,0 +1,101 @@
+/* NavBar.css */
+
+.navbar {
+    width: 100%; /* Make sure the navbar takes the full width */
+    display: flex; /* Use Flexbox for horizontal layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space items evenly */
+    padding: 10px; /* Add some padding */
+    border-bottom: 1px solid #dee2e6; /* Optional: Add a bottom border */
+    box-sizing: border-box; /* Include padding in width calculation */
+    height: 90px;
+}
+  .navbar form {
+    margin-right: auto; /* Push the form to the left */
+  }
+  
+  .navbar input[type="text"] {
+    padding: 5px; /* Add some padding */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 4px; /* Rounded corners */
+  }
+  
+  .navbar button {
+    padding: 5px 10px; /* Add some padding */
+    border: none; /* Remove border */
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+  
+  .navbar button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    
+  }
+  
+  .navbar ul {
+    list-style-type: none; /* Remove bullet points */
+    display: flex; /* Use Flexbox for horizontal layout */
+    align-items: center; /* Center items vertically */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+  }
+  
+  .navbar li {
+    margin-left: 40px; /* Space between menu items */
+  }
+  
+  .profile-pic {
+    width: 75px; /* Set width to 75px */
+    height: 75px; /* Set height to 75px */
+    border-radius: 50%; /* Make it circular */
+    object-fit: cover; /* Ensure the image covers the circle */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+  .profile-pic:hover {
+    transform: scale(1.2); /*big chungus hover*/
+}
+.profile-container {
+    position: absolute; /* Make profile container relative for dropdown positioning */
+    top: 10px;
+    right: 20px;
+}
+
+  .dropdown-menu {
+    position: absolute; /* Position dropdown relative to the profile container */
+    top: 100%; /* Align it below the profile picture */
+    right: 0; /* Align it to the right */
+    background-color: white; /* Background color for dropdown */
+    border: 1px solid #ccc; /* Border around dropdown */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    z-index: 1000; /* Ensure dropdown is above other content */
+}
+
+.dropdown-item {
+    padding: 10px 20px; /* Padding for each dropdown item */
+    text-decoration: none; /* Remove underline */
+    color: black; /* Text color */
+    display: block; /* Make items block for full clickable area */
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0; /* Highlight on hover */
+}
+
+/* Add horizontal lines between items */
+.dropdown-item + .dropdown-item {
+    border-top: 1px solid #ccc; /* Line between items */
+}
+  
+.custom-link {
+    color: inherit; /* Inherit the text color from the parent element */
+    text-decoration: none;
+    font-family: inherit; /* Inherit the font family */
+    font-size: inherit; /* Inherit the font size */
+    cursor: pointer; 
+}
+
+.custom-link:hover {
+    text-decoration: underline; /* underline on hover*/
+}
