@@ -8,11 +8,15 @@ const Recovery_Mail = () => {
     const location = useLocation();
     const { GUID } = location.state || {};
     const [FullMail, setMail] = useState('');
+    const [confirMail, setConf] = useState('')
     const [error, setError] = useState('');
     const handleMail = async (event) => {
       const [Email, Domain] = FullMail.split("@");
         event.preventDefault();
-        // Call your API with username and password
+        if (FullMail !== confirMail) {
+          setError("Emails don't match, please try again")
+          return;
+        }
         const response = await fetch('http://localhost:8080/recovery_email', {
           method: 'POST',
           headers: {
@@ -46,6 +50,16 @@ const Recovery_Mail = () => {
                 onChange={(e) => setMail(e.target.value)}
                 required
               />
+              <div>
+              <label htmlFor="Conf_Email">Confirm Email: </label>
+              <input
+                type="text"
+                id="Email2"
+                value={confirMail}
+                onChange={(e) => setConf(e.target.value)}
+                required
+              />
+            </div>
             </div>
             <button type="submit">Enter</button>
           </form>

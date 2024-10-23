@@ -67,7 +67,7 @@ const NavBar = ({ GUID }) => {
       </form>
         </li>
         <li>
-        <Link to={`/myregiment`} state={{ reg: regiment, GUID: GUID }} className="custom-link">My Regiment</Link>
+        <Link to={`/myregiment`} state={{ reg: regiment, GUID: GUID }} className="custom-link">Regiment View</Link>
         </li>
         <li>
           Past Events
@@ -80,7 +80,7 @@ const NavBar = ({ GUID }) => {
             <img src={profilePic} alt="Profile" className="profile-pic" onClick={toggleDropdown} />
           {dropdownVisible && (
                     <div className="dropdown-menu">
-                        <Link to="/change-profile-pic" className="dropdown-item">Change Profile Picture</Link>
+                        <Link to={"/change-profile-pic"} state={{GUID: GUID}} className="dropdown-item">Change Profile Picture</Link>
                         <Link to="/settings" className="dropdown-item">Settings</Link>
                         <button className="dropdown-item" onClick={() => {/* Logout functionality here */}}>Logout</button>
                     </div>

@@ -6,3 +6,41 @@
     width: 100%;            /* Ensures it takes the full width */
   }
   
+h2{
+    display: flex;
+    flex-direction: column; /* This will stack children vertically */
+    align-items: center;    /* Centers children horizontally */
+    justify-content: center; /* Centers children vertically */
+    width: 100%;            
+}
+.selected-Image {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the cropped image and button vertically */
+    gap: 10px; /* Space between the cropped image and button */
+    max-width: 50%;
+}
+  
+.cropped-Image {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the cropped image and button vertically */
+    gap: 10px; /* Space between the cropped image and button */
+    max-width: 50%;
+  }
+
+  .Image-Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the entire content */
+    gap: 20px; /* Adds spacing between different sections */
+    padding: 20px;
+  }
+
+  .Images-Section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px; /* Optional: Limit the total width of the section */
+    gap: 20px;
+  }

@@ -25,3 +25,7 @@
   h3 {
     text-align: center;
   }
+
+  th {
+    padding: 20px; /* Add 20px left and right padding */
+  }

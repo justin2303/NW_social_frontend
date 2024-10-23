@@ -6,7 +6,7 @@ import Home from './main/Home'; // Import the Home component
 import Recovery_Mail from './admin/r_email';
 import Verify_Email from './admin/verify_email';
 import RegimentComponent from './main/Myregiment'
-
+import CropPFP from './admin/pfp';
 const App = () => {
   return (
     <Routes>
@@ -18,6 +18,7 @@ const App = () => {
       <Route path="/recovery_email" element={<Recovery_Mail />} />
       <Route path="/verify_email" element={<Verify_Email />} />
       <Route path="/myregiment" element={<RegimentComponent/>} />
+      <Route path="/change-profile-pic" element = {<CropPFP />} />
     </Routes>
   );
 };

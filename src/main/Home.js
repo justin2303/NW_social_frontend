@@ -45,7 +45,15 @@ const HomePage = () => {
           <NavBar GUID={GUID} /> {/* Pass the GUID to NavBar */}
         </div>
   <h1>Your stats for the last Saturday Event </h1>
-  {GUID && <p>Your GUID: {GUID}</p>}
+  {responseData ? (
+                responseData.Uname ? (
+                    <p>{responseData.Uname}</p>
+                ) : (
+                    <p>Loading Username...</p>
+                )
+            ) : (
+                <p>Loading data...</p>
+            )}
 
   {error && <p>Error: {error}</p>}
   

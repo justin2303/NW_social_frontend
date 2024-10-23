@@ -76,7 +76,39 @@ const Login = () => {
         >
           signup
         </button>
-        here if this is your first time
+         here if this is your first time
+      </div>
+      <div style={{ marginTop: '20px' }}>
+        <button
+          onClick={handleSignup}
+          style={{
+            background: 'none',
+            border: 'none',
+            color: 'blue',
+            cursor: 'pointer',
+            textDecoration: 'underline',
+            padding: '0',
+          }}
+        >
+          reset
+        </button>
+         password if you forgot it
+      </div>
+      <div style={{ marginTop: '20px' }}>
+        <button
+          onClick={handleSignup}
+          style={{
+            background: 'none',
+            border: 'none',
+            color: 'blue',
+            cursor: 'pointer',
+            textDecoration: 'underline',
+            padding: '0',
+          }}
+        >
+          sign-in
+        </button>
+         here for admins
       </div>
     </div>
   );
