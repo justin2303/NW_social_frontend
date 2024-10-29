@@ -6,8 +6,9 @@
     align-items: center; /* Center items vertically */
     justify-content: space-between; /* Space items evenly */
     padding: 10px; /* Add some padding */
-    border-bottom: 1px solid #dee2e6; /* Optional: Add a bottom border */
     box-sizing: border-box; /* Include padding in width calculation */
+    height: 90px;
+    box-sizing: border-box;
     height: 90px;
 }
   .navbar form {

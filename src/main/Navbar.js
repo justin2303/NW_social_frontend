@@ -36,8 +36,10 @@ const NavBar = ({ GUID }) => {
           setRegiment(data.Regiment ); // Adjust according to your API response structure
           if (data.Pfp && data.Pfp.length > 0) {
             setProfilePic(data.Pfp);
+            sessionStorage.setItem('profilePic', data.Pfp); // Save to sessionStorage
           } else {
             setProfilePic('/hydraulic_default_pfp.png')
+            sessionStorage.setItem('profilePic', '/hydraulic_default_pfp.png'); // Save default to sessionStorage
           }
         } else {
           setError('Failed to load navigation data.');
@@ -81,6 +83,7 @@ const NavBar = ({ GUID }) => {
           {dropdownVisible && (
                     <div className="dropdown-menu">
                         <Link to={"/change-profile-pic"} state={{GUID: GUID}} className="dropdown-item">Change Profile Picture</Link>
+                        <Link to={"/my-profile"} state={{GUID: GUID}} className="dropdown-item">My Profile</Link>
                         <Link to="/settings" className="dropdown-item">Settings</Link>
                         <button className="dropdown-item" onClick={() => {/* Logout functionality here */}}>Logout</button>
                     </div>

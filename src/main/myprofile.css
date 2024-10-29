@@ -1,0 +1,129 @@
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 16px;
+    background-color: #4b1c1c;
+    margin: 50px;
+    color: white;
+    font-size: small;
+  }
+  
+  .top-row {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 16px;
+  }
+  
+  .profile-picture {
+    flex: 1;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100px;
+    height: 200px;
+  }
+  
+  .profile-picture img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .favorite-faction {
+    flex: 2;
+    padding: 8px;
+    width: 300;
+    height: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+  }
+  
+  .faction-options {
+    display: flex;
+    gap: 4px;
+  }
+  
+  .faction-options img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    opacity: 0.6;
+  }
+  
+  .faction-options img.selected {
+    opacity: 1;
+    border: 2px solid #007BFF;
+    border-radius: 50%;
+  }
+  
+  .medals-section, .bio-section {
+    border-top: 1px solid #ccc;
+    padding: 16px;
+  }
+  
+  .bio-section p {
+    margin: 0;
+  }
+  
+  .faction_img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Ensures the image fills the area without distortion */
+    border-radius: 8px; /* Optional: adds rounded corners */
+    border: 2px solid #ccc; /* Optional: adds a border */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds shadow */
+}
+
+.medals-container {
+    display: flex;
+    gap: 15px; /* Spacing between medals */
+    flex-wrap: wrap;
+  }
+  
+  .medal-item {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .medal-image {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: transform 0.2s;
+  }
+  
+  .medal-image:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+  }
+  
+  .medal-tooltip {
+    visibility: hidden;
+    width: 150px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 5px;
+    position: absolute;
+    bottom: 100%; /* Position above the image */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  
+  .medal-item:hover .medal-tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+  

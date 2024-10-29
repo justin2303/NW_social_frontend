@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
 .App-link {
@@ -36,18 +36,31 @@
     transform: rotate(360deg);
   }
 }
+@font-face {
+    font-family: font61;
+    src: url('/public/1906_FF.ttf'); 
+  }
+
 body {
-  background-color: #0f076a;
+  background-image: url('/public/paper.png');
+  background-size: cover;
+  background-attachment: fixed;
   min-height: 100vh;
   display: block;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: medium;
+  color: black;
+  font-family: font61;
 }
 .navbar-wrapper {
   width: 100%;
   display: block;
+  background: #545252;
+  color: white;
+  border-color: #000000;
+  border-width: thick;
+  border-bottom: 3px solid black;
 }
 

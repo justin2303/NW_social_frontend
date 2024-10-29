@@ -1,6 +1,6 @@
 import './Home.css';
 import { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import NavBar from './Navbar';
 
 const RegimentComponent = () => {
@@ -61,22 +61,24 @@ const RegimentComponent = () => {
         {responseData.Uname.map((uname, index) => (
           <tr key={index}>
             <td>
-        <img
-          src={
-            responseData.URL[index] === ''
-              ? '/default.png'  // Path to the default image
-              : responseData.URL[index]  // Path to the user image
-          }
-          alt="Profile"
-          style={{
-            width: '50px',
-            height: '50px',
-            marginRight: '20px',
-            transition: 'transform 0.3s ease',
-          }}
-          onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.2)'}
-          onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
-        />
+            <Link to={"/profile"} state={{ GUID: GUID, GUID1: responseData.GUID[index], Uname: uname }}>
+              <img
+                src={
+                  responseData.URL[index] === ''
+                    ? '/default.png'  // Path to the default image
+                    : responseData.URL[index]  // Path to the user image
+                }
+                alt="Profile"
+                style={{
+                  width: '50px',
+                  height: '50px',
+                  marginRight: '20px',
+                  transition: 'transform 0.3s ease',
+                }}
+                onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.2)'}
+                onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+              />
+          </Link>
         {uname}
       </td>
             <td>{responseData.Total_kills[index]}</td>

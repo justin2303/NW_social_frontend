@@ -23,6 +23,7 @@ const HomePage = () => {
         if (response.ok) {
           const data = await response.json(); // Assuming the response is in JSON format
           setResponseData(data); // Handle the response data
+          sessionStorage.setItem('Uname', data.Uname); // Save to sessionStorage
         } else {
           setError('Failed to load data from the server.');
         }
