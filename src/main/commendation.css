@@ -1,0 +1,65 @@
+.player-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between the cards */
+    justify-content: center;
+  }
+  
+  .player-card {
+    width: calc(25%); /* 3 cards per row, considering the gap */
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .player-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .player-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .player-card:hover .player-image {
+    transform: scale(1.2);
+  }
+  
+  .player-info {
+    padding-top: 10px;
+  }
+  
+  .player-info p {
+    margin: 5px 0;
+  }
+  
+  .commend-button {
+    background-color: #007bff; /* Blue background for active state */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Hover effect for enabled buttons */
+  .commend-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Disabled state styling */
+  .commend-button:disabled {
+    background-color: #ff4d4d; /* Red background for disabled state */
+    color: #fff; /* White text for contrast */
+    cursor: not-allowed; /* Show not-allowed cursor */
+    opacity: 0.8; /* Slightly faded appearance */
+  }
+  

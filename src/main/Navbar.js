@@ -38,8 +38,8 @@ const NavBar = ({ GUID }) => {
             setProfilePic(data.Pfp);
             sessionStorage.setItem('profilePic', data.Pfp); // Save to sessionStorage
           } else {
-            setProfilePic('/hydraulic_default_pfp.png')
-            sessionStorage.setItem('profilePic', '/hydraulic_default_pfp.png'); // Save default to sessionStorage
+            setProfilePic('/default.png')
+            sessionStorage.setItem('profilePic', '/default.png'); // Save default to sessionStorage
           }
         } else {
           setError('Failed to load navigation data.');
@@ -72,10 +72,10 @@ const NavBar = ({ GUID }) => {
         <Link to={`/myregiment`} state={{ reg: regiment, GUID: GUID }} className="custom-link">Regiment View</Link>
         </li>
         <li>
-          Past Events
+        <Link to={`/lastEvent`} state={{ reg: regiment, GUID: GUID }} className="custom-link">Past Event</Link>
         </li>
         <li>
-            Commendations
+        <Link to={`/commendations`} state={{ reg: regiment, GUID: GUID }} className="custom-link">Commendations</Link>
         </li>
         <li>
             <div className='profile-container'>
@@ -85,7 +85,7 @@ const NavBar = ({ GUID }) => {
                         <Link to={"/change-profile-pic"} state={{GUID: GUID}} className="dropdown-item">Change Profile Picture</Link>
                         <Link to={"/my-profile"} state={{GUID: GUID}} className="dropdown-item">My Profile</Link>
                         <Link to="/settings" className="dropdown-item">Settings</Link>
-                        <button className="dropdown-item" onClick={() => {/* Logout functionality here */}}>Logout</button>
+                        <Link to={"/login"} state={{GUID: GUID}} className="dropdown-item">Logout</Link>
                     </div>
                 )}
             </div>

@@ -8,6 +8,7 @@ const location = useLocation();
   const navigate = useNavigate();
   const { GUID } = location.state || {};
   const { FullMail } = location.state || {};
+  const {Password} = location.state || {};
   const [Verification, setVerification] = useState('');
   const [error, setError] = useState('');
   const isVerified = useRef(false);
@@ -20,7 +21,7 @@ const location = useLocation();
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ GUID }),
+        body: JSON.stringify({ GUID, Password }),
       });
     } catch (error) {
       console.error('Failed to reset signup:', error);
@@ -61,7 +62,7 @@ const location = useLocation();
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ GUID, Email, Domain, Verification }),
+      body: JSON.stringify({ GUID, Email, Domain, Verification, Password }),
     });
 
 

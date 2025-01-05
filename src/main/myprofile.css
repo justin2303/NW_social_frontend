@@ -25,7 +25,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 100px;
+    width: fit-content;
     height: 200px;
   }
   

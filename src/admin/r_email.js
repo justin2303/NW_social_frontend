@@ -7,6 +7,7 @@ const Recovery_Mail = () => {
   const navigate = useNavigate();
     const location = useLocation();
     const { GUID } = location.state || {};
+    const {Password} = location.state || {};
     const [FullMail, setMail] = useState('');
     const [confirMail, setConf] = useState('')
     const [error, setError] = useState('');
@@ -28,7 +29,7 @@ const Recovery_Mail = () => {
     
         if (response.ok) {
           console.log('Recovery email sent.');
-          navigate('/verify_email', { state: { GUID,FullMail } });
+          navigate('/verify_email', { state: { GUID,FullMail,Password } });
           console.log('Navigating to verifiactio code page');
 
         } else {

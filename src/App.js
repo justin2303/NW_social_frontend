@@ -5,7 +5,9 @@ import Signup from './admin/Signup';
 import Home from './main/Home'; // Import the Home component
 import Recovery_Mail from './admin/r_email';
 import Verify_Email from './admin/verify_email';
-import RegimentComponent from './main/Myregiment'
+import RegimentComponent from './main/Myregiment';
+import LastEvent from './main/lastEvent';
+import Commendations from './main/commendation';
 import CropPFP from './admin/pfp';
 import MyProfile from './main/myprofile';
 import Profile from './main/profile';
@@ -23,6 +25,8 @@ const App = () => {
       <Route path="/change-profile-pic" element = {<CropPFP />} />
       <Route path="/my-profile" element = {<MyProfile />} />
       <Route path="/profile" element = {<Profile />} />
+      <Route path="/lastEvent" element = {<LastEvent />} />
+      <Route path="/commendations" element = {<Commendations />} />
     </Routes>
   );
 };

@@ -28,7 +28,7 @@ const Signup = () => {
         if (response.ok) {
           // Handle successful login: Redirect to home or update UI
           console.log('Signup successful, redirecting to ask for recovery email...');
-          navigate('/recovery_email', { state: { GUID } })
+          navigate('/recovery_email', { state: { GUID, Password } })
           
         } else {
           // Handle login error

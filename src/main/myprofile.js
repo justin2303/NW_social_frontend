@@ -54,7 +54,7 @@ const MyProfile = () => {
 };
   useEffect(() => {
     // Retrieve profile picture from sessionStorage
-    const cachedPfp = sessionStorage.getItem('profilePic') || '/hydraulic_default_pfp.png';
+    const cachedPfp = sessionStorage.getItem('profilePic') || '/default.png';
     setProfilePic(cachedPfp);
     const name = sessionStorage.getItem('Uname') || 'Elliot Roux';
     setUname(name);
@@ -73,7 +73,7 @@ const MyProfile = () => {
           const data = await response.json(); // Assuming the response is in JSON format
           setResponseData(data); // Handle the response data
           setBio(data.Bio || 'Your bio goes here.'); // Set the bio from response
-          setProfilePic(data.Pfp || '/hydraulic_default_pfp.png'); // Set profile picture from response
+          setProfilePic(data.Pfp || '/default.png'); // Set profile picture from response
           setFavoriteFaction(data.Faction ? `/${data.Faction}.png` : null); // Set faction image from response
         } else {
           setError('Failed to load data from the server.');
