@@ -69,6 +69,9 @@ const NavBar = ({ GUID }) => {
       </form>
         </li>
         <li>
+          <Link to={`/home`} state={{ GUID: GUID }} className="custom-link">Home</Link>
+        </li>
+        <li>
         <Link to={`/myregiment`} state={{ reg: regiment, GUID: GUID }} className="custom-link">Regiment View</Link>
         </li>
         <li>

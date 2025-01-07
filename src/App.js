@@ -8,6 +8,9 @@ import Verify_Email from './admin/verify_email';
 import RegimentComponent from './main/Myregiment';
 import LastEvent from './main/lastEvent';
 import Commendations from './main/commendation';
+import ResetPass from './admin/Resetpass';
+import Verify_Pass from './admin/verify_code';
+import ChangePass from './admin/change_pass';
 import CropPFP from './admin/pfp';
 import MyProfile from './main/myprofile';
 import Profile from './main/profile';
@@ -18,6 +21,9 @@ const App = () => {
       <Route path="/" element={<Navigate to="/login" />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
+      <Route path="/resetpass" element = {<ResetPass />} />
+      <Route path="/verify_reset" element = {<Verify_Pass />} />
+      <Route path="/changepass" element = {<ChangePass />} />
       <Route path="/home" element={<Home />} />
       <Route path="/recovery_email" element={<Recovery_Mail />} />
       <Route path="/verify_email" element={<Verify_Email />} />

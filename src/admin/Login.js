@@ -10,6 +10,9 @@ const Login = () => {
   const handleSignup = () => {
     navigate('/signup'); // Navigate to signup page
   };
+  const handlePassChange = () => {
+    navigate('/resetpass'); //nav to respass
+  };
   const handleLogin = async (event) => {
     event.preventDefault();
     setError(''); // Clear the error before making a new attempt
@@ -80,7 +83,7 @@ const Login = () => {
       </div>
       <div style={{ marginTop: '20px' }}>
         <button
-          onClick={handleSignup}
+          onClick={handlePassChange}
           style={{
             background: 'none',
             border: 'none',
