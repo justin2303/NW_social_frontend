@@ -10,7 +10,7 @@ const Commendations = () => {
   const [responseData, setResponseData] = useState(null);
   const [error, setError] = useState(null);
   const player_feats = ["Top Kills", "Best KD", "Top Mitigated", "At least 10 kills", "At least 10 kills"]; // Example feats for each player
-
+  const sessionID = localStorage.getItem("SessionID")
   const fetchData = async () => {
     try {
       const response = await fetch('http://localhost:8080/getcommendations', {
@@ -52,7 +52,7 @@ const Commendations = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ Regiment: Regiment, GUID: GUID, ToCommend: Commendee }),
+        body: JSON.stringify({ Regiment: Regiment, GUID: GUID, ToCommend: Commendee, Session: sessionID}),
       });
 
       if (response.ok) {

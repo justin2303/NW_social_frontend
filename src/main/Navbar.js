@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
-const NavBar = ({ GUID }) => {
+const NavBar = ({ GUID}) => {
   const [regiment, setRegiment] = useState('');
   const [profilePic, setProfilePic] = useState('');
   const [error, setError] = useState(null);
@@ -78,7 +78,7 @@ const NavBar = ({ GUID }) => {
         <Link to={`/lastEvent`} state={{ reg: regiment, GUID: GUID }} className="custom-link">Past Event</Link>
         </li>
         <li>
-        <Link to={`/commendations`} state={{ reg: regiment, GUID: GUID }} className="custom-link">Commendations</Link>
+        <Link to={`/commendations`} state={{ reg: regiment, GUID: GUID}} className="custom-link">Commendations</Link>
         </li>
         <li>
             <div className='profile-container'>

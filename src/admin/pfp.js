@@ -164,12 +164,13 @@ const [imgSrc, setImgSrc] = useState('');
         // This will log the Base64 string
         console.log(reader.result); // print res
         console.log(GUID)
+        const sessionID = localStorage.getItem("SessionID")
         const response = fetch('http://localhost:8080/change-pfp', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ GUID, Picture:reader.result }),
+          body: JSON.stringify({ GUID, Picture:reader.result, Session: sessionID}),
         });
   
         if (response.ok){

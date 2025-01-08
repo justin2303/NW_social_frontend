@@ -15,7 +15,7 @@ const MyProfile = () => {
   const [error, setError] = useState(null);
   const [bio, setBio] = useState('Your bio goes here.');
   const [isEditing, setIsEditing] = useState(false);
-
+  const sessionID = localStorage.getItem("SessionID")
   const toggleEdit = () => {
     setIsEditing(!isEditing);
   };
@@ -37,7 +37,7 @@ const MyProfile = () => {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ GUID, Bio: bio, Faction: favoriteFaction }),
+            body: JSON.stringify({ GUID, Bio: bio, Faction: favoriteFaction, Session: sessionID}),
         });
 
         if (response.ok) {

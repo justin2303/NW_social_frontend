@@ -28,6 +28,10 @@ const Login = () => {
 
 
     if (response.ok) {
+      const data = await response.json(); // Parse JSON data from the response
+      console.log('Login successful');
+      console.log('Session:', data.Session);
+      localStorage.setItem("SessionID", data.Session)
       navigate('/home', { state: { GUID } });
       // Handle successful login: Redirect to home or update UI
       console.log('Login successful, redirecting to Home...');

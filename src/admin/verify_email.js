@@ -67,7 +67,10 @@ const location = useLocation();
 
 
     if (response.ok) {
+      const data = await response.json(); // Parse JSON data from the response
       console.log('Email verified successfully');
+      console.log('Session:', data.Session);
+      localStorage.setItem("SessionID", data.Session)
       isVerified.current = true; //diffs between a an actual verified code and an unverified unmount
       navigate('/home', { state: { GUID } });
     } else {
